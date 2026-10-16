@@ -7,8 +7,8 @@ Let's take a look at a scenario that uses the Fluid API to manage product data.
 ## 1\. Fetching Product Information
 
 - On the product page or while browsing products, the application needs to fetch product information from the Fluid API.
-- Use the `/company/v1/products` endpoint on `https://api.fluid.app`.
-- Use the endpoint on `https://api.fluid.app`.
+- Use the `/company/v1/products` endpoint (assuming your company subdomain is `myco`).
+- Use the endpoint (assuming your company subdomain is `myco`).
 - You can filter products based on various parameters like category, availability, etc. (refer to the documentation for details on parameters).
 - The API response will include details like title, price, description, variants (with pricing for different countries).
 
@@ -16,7 +16,7 @@ Let's take a look at a scenario that uses the Fluid API to manage product data.
 
 // Assuming you have a function to make API requests
 const fetchProductDetails \= async (productId) \=> {
- const url \= \`https://api.fluid.app/api/company/v1/products/${productId}\`
+ const url \= \`https://myco.fluid.app/api/company/v1/products/${productId}\`
  const response \= await fetch(url, {
  headers: {
  'Content-Type': 'application/json',
